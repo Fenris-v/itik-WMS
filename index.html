@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>SAP Business One - доступное ERP решение для МСБ</title>
+
+    <meta name="autor" content="Danil Konstantinow Petersburg-Studio.com ">
+    <meta name="yandex-verification" content="40e3a3de8b68ad61"/>
+    <meta name="google-site-verification" content="JZ4srg4KNJ0vtcJ2n0wOwxQUcrp4fi1j2SyqZWsukbM"/>
+    <meta name="cmsmagazine" content="3b87f91765e204550bfffef42f6cbbed"/>
+    <meta name="yandex-verification" content="b567eb520b8c54ec"/>
+
+
+    <meta name="description" content="SAP Business One для малого и среднего бизнеса"/>
+    <meta name="keywords" content="SAP Business One, СМБ, МСБ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">* {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    header, footer, article, section, hgroup, nav, figure, aside {
+        display: block;
+    }</style>
+
+    <!--    <link rel="stylesheet" href="/templates/sap/js/OwlCarousel2-2.2.1/dist/assets/owl.castom.carousel.min.css">-->
+    <!--    <link rel="stylesheet" href="/templates/sap/js/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">-->
+    <!--<link rel="stylesheet" href="--><!--css/owl.carousel.min.css">-->
+        <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/FlexSlider/flexslider-custom.css">
+        <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/Remodal-1.1.1/src/remodal.css">
+        <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/Remodal-1.1.1/src/remodal-default-theme.css">
+    <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/css/main-plus09-10-17.css?" type="text/css">
+    <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/css/addon.css?" type="text/css">
+    <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/css/responsive.css?" type="text/css">
+    <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/css/erp-solution-block.css" type="text/css">
+    <link rel="stylesheet" href="css/newStyle.css" type="text/css">
+
+        <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/slickslider/slick.css" type="text/css">
+        <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/slickslider/slick-theme.css" type="text/css">
+        <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/fancybox3/jquery.fancybox.min.css" type="text/css">
+        <link rel="stylesheet" href="https://sapb1cloud.ru/templates/sap/css/font-awesome.min.css" type="text/css">
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+
+<header class="header header_margin">
+
+    <div class="container_fixed stykyNav" id="navBar">
+        <div class="container">
+            <div class="logoWrapper">
+                <a href="/" title="На главную">
+                    <img class="firstScreen__logo logo_1" title="logo-titile" src="/templates/sap/images/logo2.png">
+                </a>
+                <p class="descriptionLogo">it-решения для устойчивого развития</p>
+            </div>
+
+            <div class="searchWrapper">
+                <form action="/search/search_do/" method="get" class="header-search-form" id="searchForm">
+                    <input type="text" name="search_string" autocomplete="off" class="header-search-form__input"
+                           placeholder="поиск..." value="">
+                    <div class="header-search-form_wrSubmit">
+                        <label>
+                            <input type="submit" class="header-search-form__submit" value="">
+                            <i class="fas fa-search serachSubmitIco"></i>
+                        </label>
+                    </div>
+                </form>
+                <div class="search_content" style="display: none;"></div>
+                <script id="search_result_template" type="text/template">
+                    <% _.each(typesList, function(type) { %>
+                    <ul class="goods_list" style="">
+                        <li>
+								<span class="list_heading gray_text">
+									<%= type.module ? type.name : '&nbsp;' %>
+								</span>
+
+                            <ul>
+                                <% _.each(type.elements, function(page) { %>
+                                <li class="clearfix">
+                                    <a href="<%= page.link %>" class="pull-left">
+                                        <%= page.h1 %>
+                                    </a>
+                                </li>
+                                <% }); %>
+                            </ul>
+                        </li>
+                    </ul>
+                    <% }); %>
+
+                    <div class="all_result">
+                        <a>Все результаты поиска</a>
+                    </div>
+                </script>
+            </div>
+            <div class="phoneCtaWrapper">
+                <p class="phoneRow"><span class="phonePrefix">+7 (812)</span> 602-18-91</p>
+                <a class="topNav__link_cta" href="#modal-call-phone">Заказать звонок</a></li>
+                <div class="header-adaptive-search-col">
+                    <a href="#" class="header-search__ico"><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+
+
+            <!--         впаять-->
+            <div class="search-adaptive-block">
+                <form action="/search/search_do/" method="get" class="header-search-form">
+                    <input type="text" name="search_string" class="header-search-form__input" placeholder="поиск..."
+                           value="">
+                    <input type="submit" class="header-search-form__submitMob" value="">
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="menuDesctop_v2">
+        <div class="container">
+            <nav class="nav topNav topNav_v2">
+                <li class="topNav__item parent">
+                    <a class="topNav__link" href="https://sapb1cloud.ru/produkty/sap-business-one-erp/">Продукты</a>
+                    <ul class="topNav_2levelList">
+                        <li><a href="/produkty/sap-business-one-erp/">SAP Business One</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="topNav__item parent">
+                    <a class="topNav__link" href="/resheniya/">Решения</a>
+                    <ul class="topNav_2levelList">
+                        <li><a href="/resheniya/sap-business-one-v-optovoj-torgovle/">Оптовая торговля</a>
+                        </li>
+                        <li><a href="/resheniya/erp-sistema-sap-business-one-dlya-proizvodstva/">Производство</a>
+                        </li>
+                        <li><a href="/resheniya/erp-sistema-sap-business-one-dlya-servisnogo-obsluzhivaniya/">Сервисное
+                            обслуживание</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="topNav__item parent">
+                    <a class="topNav__link" href="/dolzhnost/">Должность?</a>
+                    <ul class="topNav_2levelList">
+                        <li><a href="/dolzhnost/sobstvennik/">Собственник</a>
+                        </li>
+                        <li><a href="/dolzhnost/general-nyj-direktor/">Генеральный директор</a>
+                        </li>
+                        <li><a href="/dolzhnost/finansovyj-direktor/">Финансовый директор</a>
+                        </li>
+                        <li><a href="/dolzhnost/direktor-po-zakupkam/">Директор по закупкам</a>
+                        </li>
+                        <li><a href="/dolzhnost/kommercheskij-direktor/">Коммерческий директор</a>
+                        </li>
+                        <li><a href="/dolzhnost/direktor-po-proizvodstvu/">Директор по производству</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="topNav__item ">
+                    <a class="topNav__link" href="/novosti/">Новости</a>
+                </li>
+
+                <li class="topNav__item ">
+                    <a class="topNav__link" href="/stat-i/">Статьи</a>
+                </li>
+
+                <li class="topNav__item ">
+                    <a class="topNav__link" href="#contacts">Контакты</a>
+                </li>
+
+
+            </nav>
+
+        </div>
+    </div>
+
+
+    <div itemscope itemtype="http://schema.org/Article" class="firstScreen" id="fsold">
+        <div class="container">
+            <div itemprop="description" class="firstScreen__leftSide">
+                <h1 class="textCentered">Переведите бизнес на новый уровень с доступным ERP-решением</h1>
+                <div>
+                    <img alt="SAP logo" src="https://sapb1cloud.ru/files/sap_logo.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #fsold {
+            display: none;
+        }
+    </style>
+
+    <nav class="nav topNav" id="mobileMenu">
+        <li class="topNav__item">
+            <a class="topNav__link has_child" href="https://sapb1cloud.ru/produkty/sap-business-one-erp/">
+                Продукты <span class="mobileMenu__hasList"><i class="fas fa-chevron-right"></i></span> </a>
+            <ul class="topNav_2levelList_m">
+                <!--						<li><a href="--><!--">--><!--</a></li>-->
+                <li><a href="/produkty/sap-business-one-erp/">SAP Business One</a></li>
+            </ul>
+
+        </li>
+        <li class="topNav__item">
+            <a class="topNav__link has_child" href="/resheniya/">
+                Решения <span class="mobileMenu__hasList"><i class="fas fa-chevron-right"></i></span> </a>
+            <ul class="topNav_2levelList_m">
+                <!--						<li><a href="--><!--">--><!--</a></li>-->
+                <li><a href="/resheniya/sap-business-one-v-optovoj-torgovle/">Оптовая торговля</a></li>
+                <!--						<li><a href="--><!--">--><!--</a></li>-->
+                <li><a href="/resheniya/erp-sistema-sap-business-one-dlya-proizvodstva/">Производство</a></li>
+                <!--						<li><a href="--><!--">--><!--</a></li>-->
+                <li><a href="/resheniya/erp-sistema-sap-business-one-dlya-servisnogo-obsluzhivaniya/">Сервисное
+                    обслуживание</a></li>
+            </ul>
+
+        </li>
+        <li class="topNav__item">
+            <a class="topNav__link has_child" href="/dolzhnost/">
+                Должность? <span class="mobileMenu__hasList"><i class="fas fa-chevron-right"></i></span> </a>
+            <ul class="topNav_2levelList_m">
+                <li><a href="/dolzhnost/sobstvennik/">Собственник</a></li>
+                <li><a href="/dolzhnost/general-nyj-direktor/">Генеральный директор</a></li>
+                <li><a href="/dolzhnost/finansovyj-direktor/">Финансовый директор</a></li>
+                <li><a href="/dolzhnost/direktor-po-zakupkam/">Директор по закупкам</a></li>
+                <li><a href="/dolzhnost/kommercheskij-direktor/">Коммерческий директор</a></li>
+                <li><a href="/dolzhnost/direktor-po-proizvodstvu/">Директор по производству</a></li>
+            </ul>
+
+        </li>
+        <li class="topNav__item">
+            <a class="topNav__link " href="/novosti/">
+                Новости </a>
+        </li>
+        <li class="topNav__item">
+            <a class="topNav__link " href="/stat-i/">
+                Статьи </a>
+        </li>
+        <li class="topNav__item">
+            <a class="topNav__link " href="#contacts">
+                Контакты </a>
+        </li>
+        <div class="" style="padding-top: 40px; text-align: center;">
+            <a class="phoneRow" href="tel:+7 (812) 602-18-91"><span class="phonePrefix">+7 (812)</span> 602-18-91</a>
+            <a class="topNav__link_cta topNav__link_ctaMenu" href="#modal-call-phone">Заказать звонок</a>
+        </div>
+    </nav>
+
+    <button id="hamburger" href="#" title="Menu" class="">
+        <span class="hamburger__line hamburger__line-1"></span>
+        <span class="hamburger__line hamburger__line-2"></span>
+        <span class="hamburger__line hamburger__line-3"></span>
+    </button>
+</header>
+
+<section class="inner-sapbusiness-section s_wms">
+    <div class="container">
+        <div class="wms">
+            <h1 class="section-title section-title--white">Система управления <br> складами Produmex WMS</h1>
+            <img src="images/wms.png" alt="icon">
+        </div>
+        <div class="wms__desc">
+            <ul class="wms__desc__list">
+                <li>
+                    <p><span>Система управления складами Produmex WMS</span> полностью контролирует ваш складской
+                        комплекс, и вы можете быть уверены, что ваши запасы всегда в актуальном состоянии. Решение
+                        позволяет легко отслеживать задачи, продукты и статус в бизнесе.</p>
+                </li>
+                <li>
+                    <p><span>Produmex WMS</span> - это полнофункциональная система управления складами для SAP Business
+                        One, которая делает ваши логистические процессы более эффективными и прибыльными. </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="s_wmsFor">
+    <div class="container">
+        <div class="wmsFor">
+            <div class="wmsFor_half wmsFor_left">
+                <img src="images/people.png" alt="image">
+                <p>Produmex WMS - это передовое и комплексное решение для управления складом, которое может превратить
+                    ваши логистические процессы в тонко настроенные операции, повышающие производительность и
+                    прибыльность ваших цепочек поставок. Решение поддерживает несколько складов и операторов,
+                    обрабатывая большие объемы транзакций и сохраняя при этом высокую производительность.</p>
+            </div>
+            <div class="wmsFor_half wmsFor_right">
+                <p class="wmsFor_right_top"><span>Produmex WMS</span> не только предназначен для обработки внутренних и
+                    внешних логистических процессов, но и предлагает функциональные возможности, которые поддерживают
+                    дистрибьюторов и производителей при работе с клиентами.</p>
+                <p>Инвентаризационный отчет, нумерация партий и их обработка, также являются частью решения.
+                    Автоматическое заполнение, складские движения, кросс-докинг, информация о сроке годности, а также
+                    контроль качество - это дополнительные функции, которые позволяют оптимизировать работу склада.</p>
+                <p>Система получает данные в режиме реального времени, что позволяет принимать решения быстрее, лучше и
+                    с большей уверенностью.</p>
+                <p>Produmex WMS имеет возможность просмотра большого количества отчетов, которые формируются в режиме
+                    реального времени. Это помогает иметь полную картину о текущих запасах.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s_wmsList">
+    <div class="container">
+        <ul class="wmsList">
+            <li>
+                <img src="images/wms1.jpg" alt="image">
+                <div class="wmsList__title">
+                    Организационная структура
+                </div>
+                <ul class="wmsList__points">
+                    <li>Ячеистое хранение</li>
+                    <li>Свойства ячеистого хранения</li>
+                    <li>Типы\зоны склада</li>
+                    <li>Атрибуты типов\зон склада</li>
+                    <li>Улучшенная настройка структуры склада</li>
+                    <li>Графическое представление структуры склада</li>
+                    <li>Атрибуты ячеек</li>
+                    <li>Минимальные и максимальные количества на складском месте</li>
+                    <li>Минимальный и максимальный запас номенклатуры</li>
+                    <li>Технология Печати Этикеток</li>
+                </ul>
+            </li>
+            <li>
+                <img src="images/wms2.jpg" alt="image">
+                <div class="wmsList__title">
+                    входящая логистика
+                </div>
+                <ul class="wmsList__points">
+                    <li>Управление Входящими Контейнерами</li>
+                    <li>Кросс-докинг</li>
+                    <li>Уведомление о входящей поставке</li>
+                    <li>Приемка материала с альтернативной единицей</li>
+                    <li>Слоттинг (выбор оптимального места)</li>
+                    <li>Управление входящими партиями</li>
+                    <li>Контроль качества входящей поставки</li>
+                </ul>
+            </li>
+            <li>
+                <img src="images/wms3.jpg" alt="image">
+                <div class="wmsList__title">
+                    Исходящая логистика
+                </div>
+                <ul class="wmsList__points">
+                    <li>Комплектование</li>
+                    <li>Генератор предложения комплектования</li>
+                    <li>Расширенные стратегии комплектования (волны, зоны)</li>
+                    <li>Упаковка</li>
+                    <li>Комплекты</li>
+                    <li>Комплектовочный робот (авто генерация)</li>
+                    <li>Планирование и выполнение маршрутов доставки</li>
+                    <li>Объединение упаковок</li>
+                    <li>Управление исходящими поставками</li>
+                    <li>Управление исходящими партиями</li>
+                    <li>Расширенная Блокировка Запасов</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="s_wmsScope">
+    <div class="container">
+        <div class="wmsScope">
+            <h2 class="section-title section-title--black">Возможности решения</h2>
+            <ul class="wmsScope__list">
+                <li>
+                    <div class="wmsScope__list__img">
+                        <img src="images/settings.svg" alt="icon">
+                    </div>
+                    <div class="wmsScope__list__title">
+                        Увеличение <br> производительности
+                    </div>
+                    <p>Используйте технологию сканирования штрих-кодов для оптимизации всех складских операций</p>
+                </li>
+                <li>
+                    <div class="wmsScope__list__img">
+                        <img src="images/target.svg" alt="icon">
+                    </div>
+                    <div class="wmsScope__list__title">
+                        Повышение <br> точности
+                    </div>
+                    <p>Сканирование штрих-кодов обеспечивает большую точность, чем ручные транзакции</p>
+                </li>
+                <li>
+                    <div class="wmsScope__list__img">
+                        <img src="images/copy.svg" alt="icon">
+                    </div>
+                    <div class="wmsScope__list__title">
+                        Прозрачность <br> процессов
+                    </div>
+                    <p>Мгновенная видимость всех транзакций в системе</p>
+                </li>
+                <li>
+                    <div class="wmsScope__list__img">
+                        <img src="images/idea.svg" alt="icon">
+                    </div>
+                    <div class="wmsScope__list__title">
+                        Современное <br> решение
+                    </div>
+                    <p>Сокращение запасов и эксплуатационных расходов
+                        Повышение удовлетворенности клиентов за счет улучшения соответствия требованиям
+                    </p>
+                </li>
+                <li>
+                    <div class="wmsScope__list__img">
+                        <img src="images/adjust.svg" alt="icon">
+                    </div>
+                    <div class="wmsScope__list__title">
+                        Адаптируемость
+                    </div>
+                    <p>Быстрая и простая настройка в соответствии с вашими данными и процессами</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="s_wmsSlider">
+    <div class="container">
+        <div class="wmsSlider">
+            <p><span>Produmex WMS</span> был разработан для обеспечения контроля и документирования логистических процессов в цеху или на складе. </p>
+
+            <img class="wmsSlider__image" src="images/slider.jpg" alt="image">
+
+            <div class="screenContainer">
+
+                <div class="macbookOver">
+                    <img src="images/macbook.png" alt="">
+                </div>
+
+                <div id="screenShots__bigphoto" class="">
+                    <ul class="slides bigphoto__list slick-initialized slick-slider slick-dotted">
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button"
+                                style="display: block;">Previous
+                        </button>
+                        <div class="slick-list draggable">
+                            <div class="slick-track" style="opacity: 1; width: 7336px;">
+                                <div class="slick-slide slick-current slick-active" data-slick-index="0"
+                                     aria-hidden="false"
+                                     style="width: 917px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
+                                     role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/1_operativno_otslezhivai_te_pokazateli_pribyli_ob_emy_prodazh_i_prosrochennoi_debitorskoi_zadolzhennosti_prosto_zahodya_na_svoi_rabochii_stol.png"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Оперативно отслеживайте показатели прибыли, объемы продаж и просроченной дебиторской задолженности, просто заходя на свой рабочий стол.</p>"
+                                                   tabindex="0">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/1_operativno_otslezhivai_te_pokazateli_pribyli_ob_emy_prodazh_i_prosrochennoi_debitorskoi_zadolzhennosti_prosto_zahodya_na_svoi_rabochii_stol.png"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slick-slide" data-slick-index="1" aria-hidden="true"
+                                     style="width: 917px; position: relative; left: -917px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                     role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01"
+                                     tabindex="-1">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/2_mobil_noe_prilozhenie_dlya_prodazh.jpg"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Мобильное приложение для продаж</p>" tabindex="-1">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/2_mobil_noe_prilozhenie_dlya_prodazh.jpg"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slick-slide" data-slick-index="2" aria-hidden="true"
+                                     style="width: 917px; position: relative; left: -1834px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                     role="tabpanel" id="slick-slide02" aria-describedby="slick-slide-control02"
+                                     tabindex="-1">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/3_ispol_zui_te_analitiku_chtoby_opredelit_vash_buduwii_uroven_prodazh_-_i_zakupai_te_imenno_to_chto_dei_stvitel_no_neobhodimo.png"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Используйте аналитику, чтобы определить ваш будущий уровень продаж - и закупайте именно то, что действительно необходимо.</p>"
+                                                   tabindex="-1">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/3_ispol_zui_te_analitiku_chtoby_opredelit_vash_buduwii_uroven_prodazh_-_i_zakupai_te_imenno_to_chto_dei_stvitel_no_neobhodimo.png"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slick-slide" data-slick-index="3" aria-hidden="true"
+                                     style="width: 917px; position: relative; left: -2751px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                     role="tabpanel" id="slick-slide03" aria-describedby="slick-slide-control03"
+                                     tabindex="-1">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/4_mobil_noe_prilozhenie_dlya_servisnyh_rabotnikov.jpg"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Мобильное приложение для сервисных работников.</p>"
+                                                   tabindex="-1">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/4_mobil_noe_prilozhenie_dlya_servisnyh_rabotnikov.jpg"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slick-slide" data-slick-index="4" aria-hidden="true"
+                                     style="width: 917px; position: relative; left: -3668px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                     role="tabpanel" id="slick-slide04" aria-describedby="slick-slide-control04"
+                                     tabindex="-1">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/5_ispol_zui_te_analitiku_chtoby_opredelit_vashih_vygodnyh_klientov.png"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Используйте аналитику, чтобы определить ваших выгодных клиентов.</p>"
+                                                   tabindex="-1">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/5_ispol_zui_te_analitiku_chtoby_opredelit_vashih_vygodnyh_klientov.png"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slick-slide" data-slick-index="5" aria-hidden="true"
+                                     style="width: 917px; position: relative; left: -4585px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                     role="tabpanel" id="slick-slide05" aria-describedby="slick-slide-control05"
+                                     tabindex="-1">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/6_poluchai_te_ischerpyvayuwuyu_informaciyu_o_svoem_klinte_v_rezhime_real_nogo_vremeni_iz_odnogo_okna.png"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Получайте исчерпывающую информацию о своем клинте в режиме реального времени из одного окна</p>"
+                                                   tabindex="-1">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/6_poluchai_te_ischerpyvayuwuyu_informaciyu_o_svoem_klinte_v_rezhime_real_nogo_vremeni_iz_odnogo_okna.png"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slick-slide" data-slick-index="6" aria-hidden="true"
+                                     style="width: 917px; position: relative; left: -5502px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                     role="tabpanel" id="slick-slide06" aria-describedby="slick-slide-control06"
+                                     tabindex="-1">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/7_ispol_zui_te_analitiku_dlya_formirovaniya_zakazov.png"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Используйте аналитику для формирования заказов.</p>"
+                                                   tabindex="-1">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/7_ispol_zui_te_analitiku_dlya_formirovaniya_zakazov.png"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="slick-slide" data-slick-index="7" aria-hidden="true"
+                                     style="width: 917px; position: relative; left: -6419px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
+                                     role="tabpanel" id="slick-slide07" aria-describedby="slick-slide-control07"
+                                     tabindex="-1">
+                                    <div>
+                                        <li itemscope="" itemtype="http://schema.org/ImageObject" class="bigphoto__item"
+                                            style="width: 100%; display: inline-block;">
+                                            <div class="bigImg_wrapper">
+                                                <!-- ссылку на фенсибокс скрываем до появления новых фотографий -->
+                                                <a href="https://sapb1cloud.ru/files/palbums/8_otslezhivai_te_kazhdyi_etap_vypolneniya_zakaza_i_ego_tekuwii_status_bez_slozhnyh_otchetov_i_lishnih_zvonkov.png"
+                                                   class="title__bigphoto_zoomLink" data-fancybox="images"
+                                                   data-caption="<p>Отслеживайте каждый этап выполнения заказа и его текущий статус без сложных отчетов и лишних звонков.</p>"
+                                                   tabindex="-1">
+                                                    <img class="bigphoto__img"
+                                                         src="https://sapb1cloud.ru/files/palbums/8_otslezhivai_te_kazhdyi_etap_vypolneniya_zakaza_i_ego_tekuwii_status_bez_slozhnyh_otchetov_i_lishnih_zvonkov.png"
+                                                         itemprop="contentUrl">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: block;">
+                            Next
+                        </button>
+                        <ul class="slick-dots" style="display: block;" role="tablist">
+                            <li class="slick-active" role="presentation">
+                                <button type="button" role="tab" id="slick-slide-control00"
+                                        aria-controls="slick-slide00" aria-label="1 of 8" tabindex="0"
+                                        aria-selected="true">1
+                                </button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control01"
+                                        aria-controls="slick-slide01" aria-label="2 of 8" tabindex="-1">2
+                                </button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control02"
+                                        aria-controls="slick-slide02" aria-label="3 of 8" tabindex="-1">3
+                                </button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control03"
+                                        aria-controls="slick-slide03" aria-label="4 of 8" tabindex="-1">4
+                                </button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control04"
+                                        aria-controls="slick-slide04" aria-label="5 of 8" tabindex="-1">5
+                                </button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control05"
+                                        aria-controls="slick-slide05" aria-label="6 of 8" tabindex="-1">6
+                                </button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control06"
+                                        aria-controls="slick-slide06" aria-label="7 of 8" tabindex="-1">7
+                                </button>
+                            </li>
+                            <li role="presentation" class="">
+                                <button type="button" role="tab" id="slick-slide-control07"
+                                        aria-controls="slick-slide07" aria-label="8 of 8" tabindex="-1">8
+                                </button>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s_wmsSpheres">
+    <div class="container">
+        <div class="wmsSpheres">
+            <div class="wmsSpheres__title">
+                Решение обеспечивает следующие функции для разных целевых рынков, к примеру:
+            </div>
+            <ul class="wmsSpheres__list">
+                <li>
+                    <div class="wmsSpheres__list__title">Товары повседневного спроса</div>
+                    <ul>
+                        <li>Безбумажная работа с радиочастотными терминалами</li>
+                        <li>Увеличение производительности</li>
+                        <li>Улучшенная точности доставки</li>
+                        <li>Снижение затрат</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="wmsSpheres__list__title">Пищевая промышленность</div>
+                    <ul>
+                        <li>Соответствие нормативным требованиям: идентификация, отслеживание GS1</li>
+                        <li>Срок годности, FEFO, FIFO, два номера партии</li>
+                        <li>Управление весом</li>
+                        <li>Производство и упаковка</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="wmsSpheres__list__title">Фармацевтика</div>
+                    <ul>
+                        <li>Соответствие нормативным требованиям: отслеживание, аудиторский контроль</li>
+                        <li>Управление качеством складских запасов (партия, номенклатура, логистическая единица)</li>
+                        <li>Отбор проб</li>
+                        <li>Взвешивание и дозирование</li>
+                        <li>Серийные номера</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="wmsSpheres__list__title">Логистика 3PL</div>
+                    <ul>
+                        <li>Отслеживание заказов</li>
+                        <li>Выставление счетов за услуги</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="wmsSpheres__list__title">Распределение серийных изделий</div>
+                    <ul>
+                        <li>Отслеживание на уровне номенклатуры (серийные номера)</li>
+                        <li>Борьба с контрафактом</li>
+                        <li>Защита бренда</li>
+                    </ul>
+                </li>
+                <li>
+                    <img src="images/man.png" alt="image">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer itemscope itemtype="http://schema.org/Organization" class="footer" id="block4">
+
+    <div class="container">
+
+        <div class="footer__copyright">
+            <p><img src="/templates/sap/images/new-ico/logo-footer.png"></p>
+            <p>
+                <small>
+                    <span itemprop="name">ООО «Информационные <br/> технологии и консалтинг»</span><br/>© 2007-2020
+                </small>
+            </p>
+        </div>
+
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="footer__contacts">
+            <p itemprop="streetAddress">Россия, 191119, г. Санкт-Петербург ул. Звенигородская, д. 1, корп. 2.</p>
+            <p itemprop="telephone">Телефон: <a class="" href="tel:+7 (812) 602-18-91">+7 (812) 602-18-91</a></p>
+            <p itemprop="email">Электронная почта: <a
+                    href="mailto:info@itctg.ru">info@itctg.ru</a>
+            </p>
+        </div>
+
+        <div class="footer__socials">
+
+            <a target="_blank" href="https://www.facebook.com/itctgsap/" class="socials__link social_fb"><img
+                    src="/templates/sap/images/new-ico/facebook.png"></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCwIwuGVjsSJDJ8QHvi2TpZA"
+               class="socials__link social_gplus"><img
+                    src="/templates/sap/images/new-ico/g+.png"></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCwIwuGVjsSJDJ8QHvi2TpZA"
+               class="socials__link social_youtube"><img
+                    src="/templates/sap/images/new-ico/you-tube.png"></a>
+
+
+            <div style="clear: both;">
+                <style type="text/css">
+                    .studio_wrapper a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+                    .studio_wrapper a:visited {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+
+                    .studio_wrapper a img {
+                        display: inline-block;
+                        vertical-align: bottom;
+                    }
+
+                    @media only screen and (max-width: 767px) {
+                        .studio_wrapper {
+                            text-align: center !important;
+                        }
+                    }
+                </style>
+                <div style="text-align:right; margin-top: 20px;" class="studio_wrapper">
+                    <a href="https://petersburg-studio.com/sozdanie-saytov" target="_blank" title="Разработка сайтов">
+                        Создание сайта<br><img src="/sp_logo.png" alt="Студия Веб-Питер">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="subFooter">
+        <div class="container">
+            <p>Все информационные материалы, представленные на Сайте, носят справочный характер и не могут в полной мере
+                передавать достоверную информацию о свойствах и характеристиках Товара, и не являются публичной офертой
+                в соответствии с пунктом 2 статьи 437 ГК РФ</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://sapb1cloud.ru/templates/sap/js/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
+<script src="https://sapb1cloud.ru/templates/sap/FlexSlider/jquery.flexslider-min.js"></script>
+<script src="https://sapb1cloud.ru/templates/sap/Remodal-1.1.1/src/remodal.js"></script>
+<script src="https://sapb1cloud.ru/templates/sap/js/scroll-to.js?1595353382"></script>
+
+<script src="https://sapb1cloud.ru/templates/sap/slickslider/slick.min.js"></script>
+<script src="https://sapb1cloud.ru/templates/sap/fancybox3/jquery.fancybox.min.js"></script>
+<!--<script src="https://sapb1cloud.ru/templates/sap/js/main.js?1595353382"></script>-->
+<script src="js/scripts.js"></script>
+<script src="https://sapb1cloud.ru/templates/sap/js/jquery.validate.min.js"></script>
+<script src="https://sapb1cloud.ru/templates/sap/js/jquery.maskedinput.min.js"></script>
+</body>
+
+</html>

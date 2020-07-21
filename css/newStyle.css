@@ -1,0 +1,300 @@
+@font-face {
+  font-family: geometria;
+  src: url(../fonts/geometria-webfont.ttf);
+}
+@font-face {
+  font-family: geometriaBold;
+  src: url(../fonts/geometria-bold-webfont.ttf);
+}
+@font-face {
+  font-family: geometria;
+  src: url(../fonts/geometria-webfont.ttf);
+}
+@font-face {
+  font-family: geometriaBold;
+  src: url(../fonts/geometria-bold-webfont.ttf);
+}
+.wms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wms .section-title {
+  text-align: left;
+}
+.wms .wms__icon {
+  width: 270px;
+  flex-shrink: 1;
+}
+.wms__desc__list {
+  display: flex;
+  justify-content: space-between;
+}
+.wms__desc__list li {
+  width: 47%;
+  border-top: 3px solid #ffffff;
+  padding-top: 40px;
+}
+.wms__desc__list li p {
+  font-family: geometria;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.wms__desc__list li p span {
+  font-family: geometriaBold;
+  color: #000000;
+}
+
+.s_wmsFor {
+  margin-bottom: 100px;
+}
+
+.wmsFor {
+  display: flex;
+  justify-content: space-between;
+}
+.wmsFor_half {
+  width: 50%;
+}
+.wmsFor_left p {
+  background: #0e82e2;
+  padding: 50px;
+  font-family: geometria;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.wmsFor_right {
+  padding-left: 80px;
+  padding-top: 70px;
+  position: relative;
+}
+.wmsFor_right::before {
+  position: absolute;
+  content: " ";
+  width: 130px;
+  height: 120px;
+  background: url("../images/blue_dot.png");
+  display: block;
+  -moz-transform: translate(-30%, -30%);
+  -ms-transform: translate(-30%, -30%);
+  -o-transform: translate(-30%, -30%);
+  -webkit-transform: translate(-30%, -30%);
+  transform: translate(-30%, -30%);
+  opacity: 0.5;
+}
+.wmsFor_right p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: geometria;
+}
+.wmsFor_right p.wmsFor_right_top {
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 50px;
+}
+.wmsFor_right p.wmsFor_right_top span {
+  color: #0e82e2;
+  font-family: geometriaBold;
+}
+
+.s_wmsList {
+  background: url("../images/blueDotsBtm.png") repeat-x bottom;
+  padding-bottom: 100px;
+  margin-bottom: 10px;
+}
+
+.wmsList {
+  display: flex;
+  justify-content: space-between;
+}
+.wmsList > li {
+  width: 32%;
+}
+.wmsList__title {
+  font-size: 16px;
+  line-height: 60px;
+  background: #4ac8f5;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.wmsList__points li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.3;
+  padding-right: 20px;
+}
+.wmsList__points li::before {
+  position: absolute;
+  content: " ";
+  width: 9px;
+  height: 9px;
+  background: #4ac8f5;
+  left: 0;
+  top: 8px;
+}
+.wmsList > li:nth-child(even) .wmsList__title {
+  background: #0e82e2;
+}
+.wmsList > li:nth-child(even) .wmsList__points li::before {
+  background: #0e82e2 !important;
+}
+
+.s_wmsScope {
+  background: #0e82e2;
+  margin-bottom: 10px;
+}
+
+.wmsScope {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.wmsScope__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.wmsScope__list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28%;
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  position: relative;
+}
+.wmsScope__list li::before {
+  z-index: 1;
+  top: 0;
+  left: 40%;
+  position: absolute;
+  content: " ";
+  width: 130px;
+  height: 120px;
+  background: url("../images/white_dot.png") repeat;
+  opacity: 0.5;
+}
+.wmsScope__list li p {
+  font-family: geometria;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  max-width: 300px;
+}
+.wmsScope__list__img {
+  background: #ffffff;
+  padding: 30px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.wmsScope__list__img img {
+  max-width: 70px;
+}
+.wmsScope__list__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.s_wmsSlider {
+  background: url("../images/blueDotsBtm-rotate.png") repeat-x top;
+  padding-top: 100px;
+}
+
+.wmsSlider {
+  position: relative;
+}
+.wmsSlider p {
+  width: 45%;
+  font-size: 30px;
+  line-height: 42px;
+  font-family: geometria;
+  margin-bottom: 100px;
+}
+.wmsSlider__image {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
+}
+.wmsSlider .screenContainer {
+  width: 50%;
+}
+.wmsSlider .macbookOver {
+  width: 700px;
+  left: 69%;
+}
+.wmsSlider #screenShots__bigphoto {
+  width: 674px;
+  padding-top: 22px;
+}
+.wmsSlider .bigphoto__img {
+  left: 43%;
+  max-height: 340px;
+}
+
+.wmsSpheres__title {
+  font-family: pt_mono, Menlo, Monaco, Consolas, "Courier New", monospace;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.4;
+  max-width: 600px;
+  margin: 0 auto 100px;
+}
+.wmsSpheres__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.wmsSpheres__list > li {
+  width: 32%;
+  padding-right: 30px;
+  border-top: 3px solid #4ac8f5;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+.wmsSpheres__list > li:last-child {
+  padding-top: 0;
+  margin-bottom: 0;
+  border-top: none;
+}
+.wmsSpheres__list > li li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.3;
+  padding-right: 20px;
+}
+.wmsSpheres__list > li li::before {
+  position: absolute;
+  content: " ";
+  width: 9px;
+  height: 9px;
+  background: #4ac8f5;
+  left: 0;
+  top: 8px;
+}
+.wmsSpheres__list__title {
+  font-family: geometriaBold;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=newStyle.css.map */
