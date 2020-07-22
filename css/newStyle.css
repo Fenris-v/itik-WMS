@@ -237,17 +237,33 @@
 }
 .wmsSlider .macbookOver {
   width: 700px;
-  left: 69%;
 }
 .wmsSlider #screenShots__bigphoto {
-  width: 674px;
+  width: 540px;
   padding-top: 22px;
 }
 .wmsSlider .bigphoto__img {
   left: 43%;
   max-height: 340px;
 }
+.wmsSlider .bigImg_wrapper {
+  width: 520px;
+  margin: 0 45px;
+}
+.wmsSlider .slick-next {
+  right: -70px;
+}
+.wmsSlider .slick-prev {
+  left: -70px;
+}
 
+.s_wmsSpheres {
+  background: url("../images/lightBlueDotsBtm.png") repeat-x bottom;
+}
+
+.wmsSpheres {
+  padding-bottom: 100px;
+}
 .wmsSpheres__title {
   font-family: pt_mono, Menlo, Monaco, Consolas, "Courier New", monospace;
   text-align: center;
@@ -295,6 +311,92 @@
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 40px;
+}
+
+.s_wmsExperience {
+  background: #e6f2fc;
+  margin-bottom: 180px;
+  position: relative;
+}
+.s_wmsExperience__pattern {
+  bottom: -35px;
+  position: absolute;
+  background: url("../images/lightBlueDotsBtm-rotate.png") repeat-x;
+  height: 35px;
+  width: 100%;
+}
+
+.wmsExperience {
+  padding-top: 100px;
+}
+.wmsExperience .section-title {
+  margin-bottom: 100px;
+}
+.wmsExperience_top, .wmsExperience_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.wmsExperience_top_left, .wmsExperience_top_right, .wmsExperience_bottom_left, .wmsExperience_bottom_right {
+  width: 50%;
+  position: relative;
+}
+.wmsExperience_top {
+  margin-bottom: 100px;
+}
+.wmsExperience_top_right {
+  padding-left: 50px;
+}
+.wmsExperience_bottom_left {
+  padding-right: 50px;
+  padding-bottom: 80px;
+}
+.wmsExperience_bottom_right {
+  position: relative;
+}
+.wmsExperience_bottom_right img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.wmsExperience_bottom .wmsExperience__nums {
+  right: 0;
+  left: auto;
+}
+.wmsExperience__itemTitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: pt_mono, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: bold;
+}
+.wmsExperience__itemTitle span {
+  color: #0e82e2;
+}
+.wmsExperience__itemTitle:nth-child(2) {
+  margin-bottom: 30px;
+}
+.wmsExperience p {
+  font-family: geometria;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 30px;
+  z-index: 2;
+  position: relative;
+}
+.wmsExperience p.wmsExperience_small {
+  font-size: 15px;
+  line-height: 26px;
+}
+.wmsExperience__nums {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-family: pt_mono, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 185px;
+  font-weight: bold;
+  line-height: 125px;
+  color: #ffffff;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=newStyle.css.map */
