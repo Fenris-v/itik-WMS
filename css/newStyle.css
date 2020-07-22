@@ -399,4 +399,155 @@
   z-index: 1;
 }
 
+@media only screen and (max-width: 900px) {
+  .wms__desc__list {
+    flex-direction: column;
+  }
+  .wms__desc__list li {
+    width: 100%;
+  }
+  .wms__desc__list li:first-child {
+    margin-bottom: 40px;
+  }
+}
+.wmsFor {
+  flex-direction: column;
+}
+.wmsFor_half {
+  width: 100%;
+}
+.wmsFor_left img {
+  display: block;
+  margin: 0 auto;
+}
+
+.wmsScope {
+  padding-top: 50px;
+}
+
+.s_wmsExperience {
+  margin-bottom: 50px;
+}
+
+.wmsExperience {
+  padding-top: 50px;
+}
+.wmsExperience .section-title {
+  margin-bottom: 50px;
+}
+.wmsExperience_top {
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.wmsExperience_top_left, .wmsExperience_top_right {
+  width: 100%;
+}
+.wmsExperience_top_left {
+  margin-bottom: 40px;
+}
+.wmsExperience_top_left img {
+  width: 100%;
+}
+.wmsExperience_top_right {
+  padding-left: 0;
+}
+
+.wmsExperience__nums {
+  display: none;
+}
+
+.wmsExperience_bottom {
+  flex-direction: column-reverse;
+}
+.wmsExperience_bottom_left, .wmsExperience_bottom_right {
+  width: 100%;
+}
+.wmsExperience_bottom_right {
+  margin-bottom: 40px;
+}
+.wmsExperience_bottom_right img {
+  position: static;
+}
+.wmsExperience_bottom_left {
+  padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .wms img {
+    display: none;
+  }
+
+  .wms__desc__list li {
+    padding-top: 20px;
+  }
+  .wms__desc__list li:first-child {
+    margin-bottom: 20px;
+  }
+}
+.s_wmsFor {
+  margin-bottom: 20px;
+}
+
+.wmsFor_left p {
+  padding: 20px;
+}
+
+.wmsFor_right {
+  padding-top: 40px;
+  padding-left: 0;
+}
+.wmsFor_right::before {
+  display: none;
+}
+
+.s_wmsList {
+  padding-bottom: 40px;
+}
+
+.wmsList {
+  flex-wrap: wrap;
+}
+.wmsList > li {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.wmsScope .section-title {
+  margin-bottom: 20px;
+}
+
+.wmsScope__list li {
+  width: 100%;
+}
+.wmsScope__list__img, .wmsScope__list__title {
+  margin-bottom: 20px;
+}
+
+.wmsSlider p {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.wmsSlider__image {
+  position: static;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.wmsSpheres__title {
+  margin-bottom: 40px;
+}
+
+.wmsSpheres__list {
+  flex-wrap: wrap;
+}
+.wmsSpheres__list > li {
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 0;
+}
+
+.wmsSpheres__list__title {
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=newStyle.css.map */
